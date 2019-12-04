@@ -8,14 +8,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class DateDetails {
 
 	private LocalDate localDate;
+	private String dateTime;
 
 	public DateDetails() {
 
 	}
 
-	public DateDetails(LocalDate localDate) {
+	public DateDetails(LocalDate localDate, String dateTime) {
 		super();
 		this.localDate = localDate;
+		this.dateTime = dateTime;
 	}
 
 	public LocalDate getLocalDate() {
@@ -24,6 +26,14 @@ public class DateDetails {
 
 	public void setLocalDate(LocalDate localDate) {
 		this.localDate = localDate;
+	}
+
+	public String getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(String dateTime) {
+		this.dateTime = dateTime;
 	}
 
 }

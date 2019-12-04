@@ -30,20 +30,13 @@ public class HomeController {
 		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=os6UnKvE5d7uqNVEhHKDGL9ReGhTHcRB&locale=*";
 		ResponseEntity<EventResults> response = rt.exchange(url, HttpMethod.GET, entity, EventResults.class);
 		
-<<<<<<< HEAD
-		
-		String response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + eventKey, String.class);
-		//System.out.println(response);
-		
-		
-		return new ModelAndView("home");
-=======
+
 //		String response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + eventKey, String.class);
 		System.out.println(response);
 		
 		
 		return new ModelAndView("index", "eventResults", response.getBody());
->>>>>>> 0985cb10772a957b5815945f7be4db732ed324d0
+
 	}
 	
 }
