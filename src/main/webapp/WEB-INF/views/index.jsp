@@ -16,54 +16,34 @@
 
 	<div class = "container">
 	
+	
+	<br></br>
+	<br></br>
+	
+	<form action = "/landing-zone">
 	Select an <i>event type</i>:
-	<select>
+	<select name = "segmentName">
 	<option></option>
 	<option>Sports</option>
 	<option>Concerts</option>
 	<option>Arts & Theatre</option>
 	<option>Family</option>
 	</select>
+		Enter a <i>zip code</i>: <input name = "postalCode" type = "text" placeholder="i.e. 48236">
 	
 	<br></br>
-	<br></br>
 	
-	<form>
-		Enter a <i>zip code</i>: <input type = "text" placeholder="i.e. 48236">
-	</form>
-	<br></br>
-	<form>
-		Enter a <i>date range</i> for the event: Between <input type = "text" placeholder = "yyyy-mm-dd"> and <input type = "text" placeholder = "yyyy-mm-dd">
-	</form>
+		Enter a <i>date range</i> for the event: <input name = "localDate" type = "text" placeholder = "yyyy-mm-dd">
+	
 	<br>
-	</div>
 	<div class = "container">
 	 <input type = "submit" class = "btn btn-primary">
 	 </div>
+	</form>
+	</div>
 	
 	<br></br>
 	
-	<div class="container">
-	
-	<table style = "width:100%">
-  <tr>
-    <th>Event</th>
-    <th>Event Type</th>
-    <th>Event Date</th>
-    <th></th>
-  </tr>
-  <c:forEach var="e" items="${eventResults }">
-  <tr>
-    <td>${e.name }</td>
-    <td>${e.type }</td>
-    <td>${e. }
-  </tr>
-  </c:forEach>
-</table>
-
-
-	
-	</div> 
 
 </body>
 </html>
