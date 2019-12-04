@@ -13,7 +13,8 @@ public class Event {
 	@JsonProperty("_embedded")
 	SecondLayer emb2;
 	ArrayList<Classification> classifications;
-//	Dates dates;
+	Dates dates;
+	private String url;
 
 	public Event() {
 
@@ -60,12 +61,22 @@ public class Event {
 		this.classifications = classifications;
 	}
 
-//	public Dates getDates() {
-//		return dates;
-//	}
-//
-//	public void setDates(Dates dates) {
-//		this.dates = dates;
-//	}
+	public Dates getDates() {
+		return dates;
+	}
+
+	public void setDates(Dates dates) {
+		this.dates = dates;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
+	
 
 }

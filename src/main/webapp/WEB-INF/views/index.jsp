@@ -21,13 +21,14 @@
 	<br></br>
 	
 	<form action = "/landing-zone">
+	
 	Select an <i>event type</i>:
 	<select name = "segmentName">
-	<option></option>
-	<option>Sports</option>
-	<option>Music</option>
-	<option>Arts & Theater</option>
+	<option value="Sports">Sports</option>
+	<option value="Music">Music</option>
+	<option value="Arts+%26+Theatre">Arts & Theatre</option>
 	</select>
+	
 		Enter a <i>zip code</i>: <input name = "postalCode" type = "text" placeholder="i.e. 48236">
 	
 	<br></br>

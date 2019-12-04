@@ -1,35 +1,33 @@
 package co.gc.APICapstone.entity;
 
-import java.time.LocalDate;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DateDetails {
 
-	private LocalDate localDate;
+	private String localDate;
 	private String dateTime;
 
 	public DateDetails() {
 
 	}
 
-	public DateDetails(LocalDate localDate, String dateTime) {
+	public DateDetails(String localDate, String dateTime) {
 		super();
 		this.localDate = localDate;
 		this.dateTime = dateTime;
 	}
 
-	public DateDetails(LocalDate localDate) {
+	public DateDetails(String localDate) {
 		super();
 		this.localDate = localDate;
 	}
 
-	public LocalDate getLocalDate() {
+	public String getLocalDate() {
 		return localDate;
 	}
 
-	public void setLocalDate(LocalDate localDate) {
+	public void setLocalDate(String localDate) {
 		this.localDate = localDate;
 	}
 

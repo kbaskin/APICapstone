@@ -22,12 +22,13 @@
   </tr>
   <c:forEach var="e" items="${eventResults }">
   <tr>
-    <td>${e.name }</td>
+    <td><a href="${e.url }">${e.name }</a></td>
+    
     <td><c:forEach var ="t" items="${e.classifications }">
     ${t.segment.name }
     </c:forEach></td>
-<%--    <td><c:forEach var="d" items="${e.dates.start }">
-    ${d.localDate }</c:forEach></td> --%>
+    
+	<td> ${e.dates.start.localDate }</td>
   </tr>
   </c:forEach>
 </table>
