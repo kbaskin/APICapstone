@@ -19,10 +19,10 @@ public class HomeController {
 		
 		
 		String response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + eventKey, String.class);
-		System.out.println(response);
+		//System.out.println(response);
 		
 		
-		return new ModelAndView();
+		return new ModelAndView("home");
 	}
 
 }
