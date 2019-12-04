@@ -23,6 +23,7 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public ModelAndView home() {
+
 		HttpHeaders headers = new HttpHeaders();
 		headers.add(HttpHeaders.USER_AGENT, "Testing!");
 		headers.add("Accept", MediaType.APPLICATION_JSON_VALUE);
@@ -34,9 +35,14 @@ public class HomeController {
 //		String response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + eventKey, String.class);
 		System.out.println(response);
 		
+
 		
-		return new ModelAndView("index", "eventResults", response.getBody());
+//		String response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + eventKey, String.class);
+//		System.out.println(response);
+
+		return new ModelAndView("index", "eventResults", response);
 
 	}
+	
 	
 }
