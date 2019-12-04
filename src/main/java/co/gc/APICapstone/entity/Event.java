@@ -13,20 +13,20 @@ public class Event {
 	@JsonProperty("_embedded")
 	SecondLayer emb2;
 	ArrayList<Classification> classifications;
-	Dates dates;
+//	Dates dates;
 
 	public Event() {
 
 	}
 
-	public Event(String name, String type, SecondLayer emb2, ArrayList<Classification> classifications, Dates dates) {
-		super();
-		this.name = name;
-		this.type = type;
-		this.emb2 = emb2;
-		this.classifications = classifications;
-		this.dates = dates;
-	}
+//	public Event(String name, String type, SecondLayer emb2, ArrayList<Classification> classifications, Dates dates) {
+//		super();
+//		this.name = name;
+//		this.type = type;
+//		this.emb2 = emb2;
+//		this.classifications = classifications;
+//		this.dates = dates;
+//	}
 
 	public String getName() {
 		return name;
@@ -60,12 +60,12 @@ public class Event {
 		this.classifications = classifications;
 	}
 
-	public Dates getDates() {
-		return dates;
-	}
-
-	public void setDates(Dates dates) {
-		this.dates = dates;
-	}
+//	public Dates getDates() {
+//		return dates;
+//	}
+//
+//	public void setDates(Dates dates) {
+//		this.dates = dates;
+//	}
 
 }

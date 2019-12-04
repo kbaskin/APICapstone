@@ -25,15 +25,14 @@
 	<select name = "segmentName">
 	<option></option>
 	<option>Sports</option>
-	<option>Concerts</option>
-	<option>Arts & Theatre</option>
-	<option>Family</option>
+	<option>Music</option>
+	<option>Arts & Theater</option>
 	</select>
 		Enter a <i>zip code</i>: <input name = "postalCode" type = "text" placeholder="i.e. 48236">
 	
 	<br></br>
 	
-		Enter a <i>date range</i> for the event: <input name = "localDate" type = "text" placeholder = "yyyy-mm-dd">
+	Enter a <i>date range</i> for the event: <input name = "localDate" type = "text" placeholder = "yyyy-mm-dd"> 
 	
 	<br>
 	<div class = "container">

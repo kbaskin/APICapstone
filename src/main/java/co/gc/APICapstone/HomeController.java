@@ -23,20 +23,37 @@ public class HomeController {
 		
 	}
 	
+//	@RequestMapping("/landing-zone")
+//	public ModelAndView landing(@RequestParam int postalCode, @RequestParam String localDate, @RequestParam String segmentName) {
+//		
+//		segmentName = segmentName.toLowerCase();
+//
+//		EventResults response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?&apikey=" + eventKey + "&postalCode=" + 
+//		postalCode + "&segmentName=" + segmentName + "&localDate=" +localDate, EventResults.class);
+//		
+//		
+//		//This would be to dig down into nested layers (would have to update return line to diggingDown)
+////		ArrayList<Event> diggingDown = response.getEmb().getEvents();
+//		
+//		return new ModelAndView("landing-zone", "eventResults", response.getEmb().getEvents());
+//
+//	}
+	
 	@RequestMapping("/landing-zone")
-	public ModelAndView landing(@RequestParam int postalCode, @RequestParam String localDate, @RequestParam String segmentName) {
+	public ModelAndView landing(@RequestParam int postalCode, @RequestParam String segmentName) {
 		
 		segmentName = segmentName.toLowerCase();
 
-		EventResults response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=" + eventKey + "&postalCode=" + postalCode + "&segmentName=" + segmentName + "&localDate=" +localDate, EventResults.class);
+		EventResults response = rt.getForObject("https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=" + eventKey + "&postalCode=" + 
+		postalCode + "&segmentName=" + segmentName, EventResults.class);
 		
 		
 		//This would be to dig down into nested layers (would have to update return line to diggingDown)
 //		ArrayList<Event> diggingDown = response.getEmb().getEvents();
 		
 		return new ModelAndView("landing-zone", "eventResults", response.getEmb().getEvents());
-
-	}
 	
+	
+	}
 	
 }

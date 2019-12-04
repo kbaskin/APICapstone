@@ -20,6 +20,11 @@ public class DateDetails {
 		this.dateTime = dateTime;
 	}
 
+	public DateDetails(LocalDate localDate) {
+		super();
+		this.localDate = localDate;
+	}
+
 	public LocalDate getLocalDate() {
 		return localDate;
 	}

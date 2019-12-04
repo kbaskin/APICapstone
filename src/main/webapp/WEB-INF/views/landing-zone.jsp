@@ -26,8 +26,8 @@
     <td><c:forEach var ="t" items="${e.classifications }">
     ${t.segment.name }
     </c:forEach></td>
-    <td><c:forEach var="d" items="${e.dates.dateDetails}">
-    ${d.localDate }</c:forEach></td>
+<%--    <td><c:forEach var="d" items="${e.dates.start }">
+    ${d.localDate }</c:forEach></td> --%>
   </tr>
   </c:forEach>
 </table>
