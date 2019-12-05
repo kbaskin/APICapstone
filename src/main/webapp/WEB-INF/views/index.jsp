@@ -26,7 +26,7 @@
 	<select name = "segmentName">
 	<option value="Sports">Sports</option>
 	<option value="Music">Music</option>
-	<option value="Arts+%26+Theatre">Arts & Theatre</option>
+	<option value="Miscellaneous">Miscellaneous</option>
 	</select>
 	
 		Enter a <i>zip code</i>: <input name = "postalCode" type = "text" placeholder="i.e. 48236">
