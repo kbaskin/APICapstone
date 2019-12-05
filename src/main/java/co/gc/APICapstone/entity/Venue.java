@@ -8,13 +8,13 @@ public class Venue {
 	private String name;
 	private String type;
 	private String id;
-	private int postalCode;
+	private Integer postalCode;
 
 	public Venue() {
 
 	}
 
-	public Venue(String name, String type, String id, int postalCode) {
+	public Venue(String name, String type, String id, Integer postalCode) {
 		super();
 		this.name = name;
 		this.type = type;
@@ -46,12 +46,19 @@ public class Venue {
 		this.id = id;
 	}
 
-	public int getPostalCode() {
+	public Integer getPostalCode() {
 		return postalCode;
 	}
 
-	public void setPostalCode(int postalCode) {
+	public void setPostalCode(Integer postalCode) {
 		this.postalCode = postalCode;
 	}
+
+	@Override
+	public String toString() {
+		return "name=" + name + "&type=" + type + "&id=" + id + "&postalCode=" + postalCode;
+	}
+	
+	
 
 }

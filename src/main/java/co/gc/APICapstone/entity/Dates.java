@@ -19,6 +19,11 @@ public class Dates {
 		this.start = start;
 	}
 
+	@Override
+	public String toString() {
+		return "start=" + start;
+	}
+
 	
 	
 }

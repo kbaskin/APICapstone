@@ -20,23 +20,27 @@
     <th>Event</th>
     <th>Event Type</th>
     <th>Event Date</th>
+    <th>Save Event</th>
     <th></th>
   </tr>
-  <c:forEach var="e" items="${eventResults }">
+  <c:forEach var="eR" items="${eventResults }">
   <tr>
-    <td><a href="${e.url }">${e.name }</a></td>
+    <td><a href="${eR.url }">${eR.name }</a></td>
     
-    <td><c:forEach var ="t" items="${e.classifications }">
+    <td><c:forEach var ="t" items="${eR.classifications }">
     ${t.segment.name }
     </c:forEach></td>
     
-	<td> ${e.dates.start.localDate }</td>
+	<td> ${eR.dates.start.localDate }</td>
+	
+  <td><a href="add-event?${eR }">Add Event</a></td>
+  
   </tr>
   </c:forEach>
+  
 </table>
 
-
-	
+<a class="btn btn-primary" href="bucketlist">Saved Event List</a>
 	</div> 
 	
 

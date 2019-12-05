@@ -2,12 +2,21 @@ package co.gc.APICapstone.entity;
 
 import java.util.ArrayList;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Event {
 
+	private String id;
 	private String name;
 	private String type;
 	@JsonProperty("_embedded")
@@ -76,7 +85,20 @@ public class Event {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "id=" + id + "&name=" + name + "&type=" + type + "&emb2=" + emb2 + "&classifications="
+				+ classifications + "&dates=" + dates + "&url=" + url;
+	}
 	
 
 }

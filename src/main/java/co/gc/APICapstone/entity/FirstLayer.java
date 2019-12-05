@@ -25,6 +25,11 @@ public class FirstLayer {
 	public void setEvents(ArrayList<Event> events) {
 		this.events = events;
 	}
+
+	@Override
+	public String toString() {
+		return "events=" + events;
+	}
 	
 	
 

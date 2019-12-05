@@ -34,4 +34,11 @@ public class Classification {
 		this.segment = segment;
 	}
 
+	@Override
+	public String toString() {
+		return "primary=" + primary + "&segment=" + segment;
+	}
+	
+	
+
 }

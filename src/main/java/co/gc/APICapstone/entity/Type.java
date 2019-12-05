@@ -1,10 +1,12 @@
 package co.gc.APICapstone.entity;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Type {
 
+	
 	private String id;
 	private String name;
 
@@ -33,5 +35,12 @@ public class Type {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "id=" + id + "&name=" + name;
+	}
+	
+	
 
 }
